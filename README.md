@@ -5,15 +5,20 @@ Additionally, the repository includes a collection of in-depth summary articles 
 
 ## Profile
 * [LinkedIn](https://www.linkedin.com/in/kritsada-dechawattana-426b58151/)
+* [CodeHawks (JokerStudio)](https://profiles.cyfrin.io/u/jokerstudio)
 * [Sherlock (JokerStudio)](https://audits.sherlock.xyz/watson/JokerStudio)
 
 
 ## Highlights
-
-💡 **Invalid validation of the `UniswapImplementation::beforeSwap` hook when exact in swap**
-> The internal swap isn't used, even though the `pendingPoolFees.amount1` could fulfill the swap without hitting the Uniswap pool which breaks the intended functionality for internal swap.
+💡 **Deposits on long one leverage vault don't actually finalize the flow, leading to a Denial of Service (DoS)**
+> This causes a Denial of Service (DoS) for the long one leverage vault, rendering the vault useless since it cannot proceed with another flow.
 >
-> 🔗 [2024-09-ƒlayer-issues-#385](https://github.com/sherlock-audit/2024-08-flayer-judging/issues/385)
+> 🔗 [2025-02-gamma-issues-#568](https://codehawks.cyfrin.io/c/2025-02-gamma/s/568)
+
+💡 **Loss of fee refund due to premature state deletion in `PerpetualVault::_handleReturn` function**
+> The user will lose all fee without getting any refund and the execution fee becomes stuck in the `GmxProxy` contract.
+>
+> 🔗 [2025-02-gamma-issues-#569](https://codehawks.cyfrin.io/c/2025-02-gamma/s/569)
 ---
 
 ## Team Audits
@@ -41,7 +46,8 @@ Additionally, the repository includes a collection of in-depth summary articles 
 
 | Contest | Type | Awards | Findings | Language | Date | @ |Platform | Contest Report | My Report |
 |:--:|:--:|:--:|:--:| ---- | -------- |:--:|:--:|:--:|:--:|
-| [Flayer - NFT Liquidity Protocol](https://audits.sherlock.xyz/contests/468) | NFT Liquidity Protocol, Uniswap v4 Hooks | 65th | 1M | Solidity | Sep 2024 | Individual | Sherlock | [📑](https://audits.sherlock.xyz/contests/468/report) | [💾](./sherlock/2024-08-flayer.md) |
+| [Gamma - Liquidity Management](https://codehawks.cyfrin.io/c/2025-02-gamma) | The Perpetual Vault Protocol | 36th | 2H | Solidity | Feb 2025 | Individual | CodeHawks | [📑](https://codehawks.cyfrin.io/c/2025-02-gamma/results?lt=contest&page=1&sc=reward&sj=reward&t=report) | [💾](./sherlock/2024-08-flayer.md) |
+| [Flayer - NFT Liquidity Protocol](https://audits.sherlock.xyz/contests/468) | NFT Liquidity Protocol, Uniswap v4 Hooks | 65th | 1M | Solidity | Sep 2024 | Individual | Sherlock | [📑](https://audits.sherlock.xyz/contests/468/report) | [💾](./codehawks/2025-02-gamma.md) |
 
 
 ---
@@ -50,6 +56,7 @@ Additionally, the repository includes a collection of in-depth summary articles 
 
 | CTF  | Year   | Ranking | Reference |
 |------|--------| --------| ------- |
+| ONLYPWNER | 2024 | 15 challs solved | [https://onlypwner.xyz/leaderboard](https://onlypwner.xyz/leaderboard) |
 | Damn Vulnerable DeFi V3 | 2023 | All challs solved | [https://github.com/jokerstudio/damn-vulnerable-defi-solution](https://github.com/jokerstudio/damn-vulnerable-defi-solution) |
 
 ___
